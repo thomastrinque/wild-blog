@@ -25,6 +25,7 @@
                   On
               </label>
           </div>
+          
           <!-- Display post.content if this component is not editable or editable and not in edit mode -->
           <div ng-if="(!$ctrl.editable || ($ctrl.editable && !$ctrl.editMode))">
             {{$ctrl.post.content | limitTo: ($ctrl.editable ? $ctrl.post.content.length : 110)}}
