@@ -37,7 +37,18 @@ let blogItem = {
                     this.post = res.data;
                     // save into initialPost a copy of this post (used for undo)
                     initialPost = angular.copy(this.post)
-                })
+                }).catch((err) => {
+                    console.log(err)
+                    let message;
+                    if(err.data) {
+                      message = err.data;
+                  } else {
+                      message = err;
+                  }
+                  let toastContent = `${message}`
+                  Materialize.toast(toastContent, 4000, 'toast-error')
+                  $state.go('blog.list')
+              })
             }
         } else {
             //If $stateParams.id doesn't exist we change state to app.blog.list (redirection to list)

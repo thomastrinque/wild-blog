@@ -16,6 +16,7 @@ module.exports = (app) => {
 
     //GET (for READ) method with request params id
     app.get('/posts/:id', (req, res, next) => {
+        
         return ctrl.findById(req, res, next)
     })
 

@@ -12,6 +12,10 @@ module.exports = mongoose.model('Post', new mongoose.Schema({
 	creation: {
 		type: Date
 	},
+
+	published: {
+		type: Boolean 
+	},
 	content: {
 		type: String
 	}
