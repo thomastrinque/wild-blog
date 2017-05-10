@@ -34,11 +34,11 @@ app.use(logger('combined'));
 // Set parser to get the body data request
 // ref: https://www.npmjs.com/package/body-parser
 app.use(bodyParser.urlencoded({
-    'extended': 'true'
+  'extended': 'true'
 }))
 app.use(bodyParser.json())
 app.use(bodyParser.json({
-    type: 'application/vnd.api+json'
+  type: 'application/vnd.api+json'
 }));
 
 // Set parser for cookies, same logic as bodyParser but for cookies
@@ -90,7 +90,7 @@ exports.startServer = (port, path, callback) => {
 
     //Intercept when application killed
     process.on('SIGINT', function() {
-        console.log("\nStopping...")
-        process.exit()
+      console.log("\nStopping...")
+      process.exit()
     });
-}
+  }

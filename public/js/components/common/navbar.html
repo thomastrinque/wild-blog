@@ -7,13 +7,15 @@
   <li ng-if="$ctrl.user"><a href="" ng-click="$ctrl.disconnect()" title="Disconnect" class="blue-text text-darken-1"><i class="material-icons left">close</i>Logout</a></li>
 </ul>
 <nav class="blue darken-1">
-    <div class="nav-wrapper container">
-        <a href="#" class="brand-logo"><i class="material-icons">book</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href='javascript:void(0);' data-activates='demoDropdown' dropdown>{{($ctrl.user ? $ctrl.user.name : '')}}<i class="material-icons right">{{($ctrl.user ? 'arrow_drop_down' : 'reorder')}}</i></a></li>
-        </ul>
-         <a href="#" data-activates="mobile-demo" class="button-collapse" data-sidenav="left" data-closeonclick="false"><i class="material-icons">menu</i></a>
-    </div>
+  <div class="nav-wrapper container">
+    <a href="#" class="brand-logo"><i class="material-icons">book</i></a>
+    <div id="clock">{{$ctrl.clock | date:'MMMM dd yyyy,HH:mm:ss a'}}</div>
+    
+    <ul class="right hide-on-med-and-down">
+      <li><a href='javascript:void(0);' data-activates='demoDropdown' dropdown>{{($ctrl.user ? $ctrl.user.name : '')}}<i class="material-icons right">{{($ctrl.user ? 'arrow_drop_down' : 'reorder')}}</i></a></li>
+    </ul>
+    <a href="#" data-activates="mobile-demo" class="button-collapse" data-sidenav="left" data-closeonclick="false"><i class="material-icons">menu</i></a>
+  </div>
 </nav>
 
 <ul id="mobile-demo" class="side-nav">

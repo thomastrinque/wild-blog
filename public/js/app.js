@@ -9,6 +9,10 @@ import angular from 'angular'
 import angularUIRouter from 'angular-ui-router'
 import angularCookies from 'angular-cookies'
 import angularMaterialize from 'angular-materialize'
+import angularMaterial from 'angular-material'
+import angularAria from 'angular-aria'
+import angularAnimate from 'angular-animate'
+
 
 import config from './config/config.md'
 import services from './services/services.md'
@@ -18,14 +22,14 @@ import blog from './components/blog/blog.md'
 
 console.log("In app.js")
 console.log(services)
- 
+
 angular.module('app', [
-    angularUIRouter,
-    angularCookies,
-    angularMaterialize,
-    config,
-    services,
-    common,
-    login,
-    blog
-])
+	angularUIRouter,
+	angularCookies,
+	angularMaterialize,
+	config,
+	services,
+	common,
+	login,
+	blog
+	])
