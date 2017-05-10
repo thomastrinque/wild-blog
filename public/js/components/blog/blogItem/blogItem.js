@@ -65,7 +65,10 @@ let blogItem = {
                     // if it's new post (when post._id doesn't exist) we affect to post variable response data (post created)
                     this.post = res.data
                 }
+                
+
             })
+
         }
 
         // Create undo function.
@@ -82,7 +85,7 @@ let blogItem = {
 
         this.isFav = () => {
             if (!this.post) return
-            return (this.user.bookmarks.find((post_id) => post_id.id === this.post._id))
+                return (this.user.bookmarks.find((post_id) => post_id.id === this.post._id))
         }
 
         this.addOrRemoveToBookmark = () => {

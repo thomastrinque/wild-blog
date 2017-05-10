@@ -6,12 +6,15 @@ let mongoose = require('mongoose')
 
 // Create schema Post
 module.exports = mongoose.model('Post', new mongoose.Schema({
-    title: {
-        type: String
-    },
-    content: {
-        type: String
-    }
+	title: {
+		type: String
+	},
+	creation: {
+		type: Date
+	},
+	content: {
+		type: String
+	}
 }, {
-    timestamps: true
+	timestamps: true
 }))
